@@ -1,0 +1,19 @@
+{
+  "name": "productos-venta",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/merriweather-sans": "^5.2.5",
+    "@fontsource-variable/rubik": "^5.2.5",
+    "@fontsource/merriweather": "^5.2.6",
+    "@tailwindcss/vite": "^4.0.13",
+    "astro": "^5.4.3",
+    "tailwindcss": "^4.0.13"
+  }
+}

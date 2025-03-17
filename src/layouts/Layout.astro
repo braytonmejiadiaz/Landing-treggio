@@ -1,0 +1,42 @@
+---
+import '@fontsource-variable/rubik';
+import '@fontsource/merriweather/300.css';
+import '@fontsource/merriweather/400.css';
+import '@fontsource/merriweather/700.css';
+import '@fontsource/merriweather/900.css';
+import NewHeader from "../components/NewHeader.astro";
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Productos</title>
+	</head>
+	<body>
+		<NewHeader></NewHeader>
+		<slot />
+		<Footer></Footer>
+	</body>
+</html>
+
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+	body {
+		
+		font-family: 'Merriweather', serif;
+		display: flex;
+		flex-direction: column;
+	}
+	@media(prefers-reduce-motion:reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+</style>
