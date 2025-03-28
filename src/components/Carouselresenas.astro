@@ -1,0 +1,159 @@
+---
+// src/components/ReviewsCarousel.astro
+const reviews = [
+  {
+    name: "Lucía Martínez",
+    review: "Desde que uso esta plataforma, mi negocio ha mejorado mucho. Es muy fácil de usar y me ha ayudado a organizar todo mejor. ¡La recomiendo 100%!",
+    store: "Boutique Elegante",
+  },
+  {
+    name: "Diego Ramírez",
+    review: "Increíble herramienta. Ahora puedo gestionar mis pedidos y clientes desde un solo lugar. ¡Ha sido un cambio radical para mi tienda!",
+    store: "Ferretería El Tornillo Feliz",
+  },
+  {
+    name: "Valentina Herrera",
+    review: "Me encanta lo intuitiva que es la plataforma. Antes perdía mucho tiempo en tareas repetitivas, pero ahora todo es más rápido y eficiente.",
+    store: "Cafetería Dulce Aroma",
+  },
+  {
+    name: "Javier Morales",
+    review: "La mejor inversión que he hecho para mi negocio. Ahora puedo supervisar mis ventas y stock en tiempo real. ¡Totalmente recomendada!",
+    store: "Papelería Creativa",
+  },
+  {
+    name: "Camila Rojas",
+    review: "Estoy muy satisfecha con el servicio. La atención al cliente es excelente y la plataforma es muy estable. ¡No podría estar más contenta!",
+    store: "Tienda de Moda Urbana",
+  },
+  {
+    name: "Andrés Castillo",
+    review: "Desde que implementé esta plataforma, mi negocio ha crecido un 30%. Es fácil de usar y me ha ahorrado mucho tiempo en gestión.",
+    store: "Tecnología y Más",
+  },
+  {
+    name: "Sofía Vargas",
+    review: "La plataforma es perfecta para pequeñas empresas como la mía. Me ha ayudado a centralizar toda mi información y a tomar mejores decisiones.",
+    store: "Joyería Brillante",
+  },
+  {
+    name: "Miguel Ángel Soto",
+    review: "¡Fantástica experiencia! La integración con otras herramientas fue muy sencilla y ahora todo mi negocio está conectado.",
+    store: "Mueblería Moderna",
+  },
+  {
+    name: "Isabella Fernández",
+    review: "Me encanta cómo la plataforma simplifica todo. Desde el control de inventario hasta las ventas, todo está en un solo lugar.",
+    store: "Tienda de Artesanías",
+  },
+  {
+    name: "Carlos Andrés Gómez",
+    review: "La plataforma es muy robusta y confiable. Nunca he tenido problemas y el soporte técnico siempre está disponible.",
+    store: "Supermercado Económico",
+  },
+];
+---
+
+<style>
+  .carousel-container {
+    width: 100%;
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+
+  .carousel-item {
+    flex: 0 0 30%;
+    box-sizing: border-box;
+    padding: 1rem; /* Ajuste del padding */
+  }
+
+  .carousel-item > div {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
+    color: #718096;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-item small {
+    font-size: 0.875rem;
+    color: #a0aec0;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Media Queries para hacerlo Responsive */
+  @media (max-width: 768px) {
+    .carousel-item {
+      flex: 0 0 50%; /* Dos elementos en pantallas medianas */
+    }
+    .carousel-item h3 {
+      font-size: 1.125rem; /* Ajuste del tamaño de la fuente */
+    }
+
+    .carousel-item p {
+      font-size: 0.9rem; /* Ajuste del tamaño de la fuente */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .carousel-item {
+      flex: 0 0 100%; /* Un elemento por fila en pantallas pequeñas */
+    }
+    .carousel-item h3 {
+      font-size: 1rem; /* Ajuste del tamaño de la fuente */
+    }
+
+    .carousel-item p {
+      font-size: 0.875rem; /* Ajuste del tamaño de la fuente */
+    }
+  }
+</style>
+
+<div class="overflow-hidden py-25">
+  <div class="container mx-auto px-4">
+    <h2 class="text-6xl font-bold text-center mb-8">Reseñas de Nuestros Clientes</h2>
+    <div class="relative">
+      <div class="carousel-container">
+        {reviews.map((review, index) => (
+          <div class="carousel-item">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">{review.name}</h3>
+              <p class="text-gray-600 mb-4">{review.review}</p>
+              <p class="text-sm text-gray-500">{review.store}</p>
+            </div>
+          </div>
+        ))}
+        {reviews.map((review, index) => (
+          <div class="carousel-item">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">{review.name}</h3>
+              <p class="text-gray-600 mb-4">{review.review}</p>
+              <p class="text-sm text-gray-500">{review.store}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

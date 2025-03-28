@@ -6,6 +6,8 @@ import '@fontsource/merriweather/700.css';
 import '@fontsource/merriweather/900.css';
 import NewHeader from "../components/NewHeader.astro";
 import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Whatsapp from '../components/Whatsapp.astro';
 ---
 
 <!doctype html>
@@ -13,14 +15,28 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-tre.jpg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Productos</title>
+		<title>Treggio</title>
+		<!-- Google tag (gtag.js) -->
+		<script
+	     type="text/partytown"
+		 async src="https://www.googletagmanager.com/gtag/js?id=G-0FJQ86JY4V"></script>
+		<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-0FJQ86JY4V');
+		</script>
 	</head>
+	
 	<body>
 		<NewHeader></NewHeader>
 		<slot />
-		<Footer></Footer>
+		<Footer>
+		</Footer>
+		<Whatsapp></Whatsapp>
 	</body>
 </html>
 

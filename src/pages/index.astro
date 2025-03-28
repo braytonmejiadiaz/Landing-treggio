@@ -1,7 +1,8 @@
 ---
 import Banner from '../components/Banner.astro';
 import CarouselBrands from '../components/Carousel-brands.astro';
-import Download from '../components/Download.astro';
+import Carouselresenas from '../components/Carouselresenas.astro';
+import Downloadd from '../components/Downloadd.astro';
 import Funcionalidades from '../components/Funcionalidades.astro';
 import Planes from '../components/Planes.astro';
 import ProductDetail from '../components/ProductDetail.astro';
@@ -9,46 +10,45 @@ import ReseasEstadisticas from '../components/ReseñasEstadisticas.astro';
 import Reviews from '../components/Reviews.astro';
 import SecondBanner from '../components/Second-Banner.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import Whatsapp from '../components/Whatsapp.astro';
+import SliderCentral from '../components/SliderCentral.astro';
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-
-<Layout title="Productos" description="Software para la gestión de tu negocio">
+<Layout title="FoodLogic" description="Software para la gestión de tu restaurante">
 	<main>
-		<SectionContainer>
+		<SectionContainer id="inicio" >
 			<Banner></Banner>
 		</SectionContainer>
-		<SectionContainer >
-			<SecondBanner ></SecondBanner>
+		 <SectionContainer>
+			<SecondBanner></SecondBanner>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer >
 			<CarouselBrands></CarouselBrands>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="sobre-nosotros">
 			<ProductDetail></ProductDetail>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer >
+			<SliderCentral></SliderCentral>
+		</SectionContainer>
+		<SectionContainer >
 			<ReseasEstadisticas></ReseasEstadisticas>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer >
 			<Funcionalidades></Funcionalidades>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="nuestros-planes">
 			<Planes></Planes>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer >
 			<Reviews></Reviews>
 		</SectionContainer>
-		<SectionContainer>
-			<Download></Download>
+		<SectionContainer >
+			<Downloadd></Downloadd>
 		</SectionContainer>
-		<Whatsapp></Whatsapp>
+		<SectionContainer>
+			<Carouselresenas></Carouselresenas>
+		</SectionContainer>
 	</main>
 </Layout>
 	
