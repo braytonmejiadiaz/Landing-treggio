@@ -1,0 +1,56 @@
+---
+const catalogDemos = [
+    {
+      title: "Catálogo cosmeticos",
+      image: "/cosmeshop.JPG",
+      category: "Cosmeticos",
+      link: "https://app.treggio.co/tienda/cosmeshop"
+    },
+    {
+      title: "Catálogo ciclismo",
+      image: "/rumerio.JPG",
+      category: "Ciclismo",
+      link: "https://app.treggio.co/tienda/rumerio"
+    },
+  ];
+---
+
+<div class="py-16 bg-white ">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Encabezado -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        Consulta nuestras demos de catálogos
+      </h2>
+      <p class="mt-3 max-w-2xl text-xl text-gray-600 mx-auto">
+        Explora algunos ejemplos de nuestros catálogos digitales
+      </p>
+    </div>
+
+    <!-- Grid de catálogos -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center"> 
+            {catalogDemos.map((catalog) => (
+        <a 
+          href={catalog.link} 
+          class="group block focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg overflow-hidden"
+        >
+          <div class="relative rounded-lg overflow-hidden flex justify-center">
+            <img
+              class="w-1/2 h-full  transition-transform duration-300 group-hover:scale-105"
+              src={catalog.image}
+              alt={`Catálogo ${catalog.title}`}
+              loading="lazy"
+            />
+   
+          </div>
+          <h3 class="mt-3 text-xl font-medium text-gray-900 text-center">
+            {catalog.title}
+          </h3>
+          {catalog.category && (
+            <p class="mt-1 text-ml text-gray-500 text-center">{catalog.category}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

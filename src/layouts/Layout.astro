@@ -9,7 +9,6 @@ import Footer from '../components/Footer.astro';
 import "../styles/global.css";
 import Whatsapp from '../components/Whatsapp.astro';
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -26,6 +25,13 @@ import Whatsapp from '../components/Whatsapp.astro';
 		gtag('js', new Date());
 		gtag('config', 'G-0FJQ86JY4V');
 		</script>
+		<!-- Google Tag Manager -->
+		<script type="text/partytown">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MC3VCLB8');</script>
+		<!-- End Google Tag Manager -->
 		<meta property="og:title" content="Treggio - Vende rápido y fácil"/>
 		<meta property="og:image" content="https://treggio.co/test.JPG"/>
 		<meta property="og:url" content="https://treggio.co"/>
@@ -33,12 +39,17 @@ import Whatsapp from '../components/Whatsapp.astro';
 		<meta property="og:locale" content="es_ES"/>
 		<meta property="og:description" content="Crea tu tienda y catálogo para vender fácil y rapido en internet y por WhatsApp"/>
 
+
 		<meta name="description" content="Crea tu tienda y catálogo para vender fácil y rapido en internet y por WhatsApp"/>
 		<meta name="twitter:card" content="summary_large_image"/>
 		<meta name="twitter:site" content="treggio.co"/>
 
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC3VCLB8"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<NewHeader></NewHeader>
 		<slot />
 		<Footer>
